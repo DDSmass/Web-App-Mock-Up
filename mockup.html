@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Apply for DDS Services</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <div class=header>
+      <div class=headerColumn Left>
+        <img id="seal" src="photos/seal.svg" alt="Massachusetts Seal">
+      </div>
+      <div class=headerColumn Mid>
+        <p class="header1">The Commonwealth of Massachusetts</p>
+        <p class="header2">Executive Office of Heath and Human Services</p>
+        <p class="header2"><i>Department of Developmental Services</i></p>
+      </div>
+      <div class=headerColumn Right>
+        <p class="accountHeader">Welcome, User</p>
+        <p class="accountText">My account <span class="greenArrow">></span></p>
+        <p class="accountText">Log Out <span class="greenArrow">></span></p>
+        <p class="accountText">Help <span class="greenArrow">></span></p>
+      </div>
+    </div>
+    <form id="application">
+      <h1>Application for DDS Eligibility</h1>
+      <h2>Applicant Information</h2>
+      <div class="blueBar"></div>
+      <label for="ageRange"><i>Please select the applicant's age range:</i><br></label>
+      <select id="ageRange">
+        <option selected value="1">Select age range</option>
+        <option value="2">0-4 years old</option>
+        <option value="3">5-22 years old</option>
+        <option value="4">22+ years old</option>
+      </select><br>
+      <label for="appFName">Applicant Name:</label><br>
+      <input type="text" id="appFName" name="appFName" placeholder="First Name"><input type="text" id="appMInitial" name="appMInitial" placeholder="M.I"><input type="text" id="appLName" name="appLName" placeholder="Last Name"><br>
+      <label for="appBirthdate"> Date of Birth:</label><br>
+      <input type="date" id="appBirthdate" name="appBirthdate"><br>
+      <label for="appAddress1">Address</label><br>
+      <input type="text" id="appAddress1" name="appAddress1" placeholder="123 Somewhere Street"><br>
+      <input type="text" id="appAddress2" name="appAddress2" placeholder="Apartment 456 (optional)"><br>
+      <input type="text" id="appAddress3" name="appAddress3" placeholder="City">
+      <select id="appState">
+        <option value="1">AL</option>
+        <option value="2">AK</option>
+        <option value="3">AZ</option>
+        <option value="4">AR</option>
+        <option value="5">CA</option>
+        <option value="6">CO</option>
+        <option value="7">CT</option>
+        <option value="8">DE</option>
+        <option value="9">FL</option>
+        <option value="10">GA</option>
+        <option value="11">HA</option>
+        <option value="12">ID</option>
+        <option value="13">IL</option>
+        <option value="14">IN</option>
+        <option value="15">IA</option>
+        <option value="16">KS</option>
+        <option value="17">KY</option>
+        <option value="18">LA</option>
+        <option value="19">ME</option>
+        <option value="20">MD</option>
+        <option selected value="21">MA</option>
+        <option value="22">MI</option>
+        <option value="23">MN</option>
+        <option value="24">MS</option>
+        <option value="25">MO</option>
+        <option value="26">MT</option>
+        <option value="27">NE</option>
+        <option value="28">NE</option>
+        <option value="29">NH</option>
+        <option value="30">NJ</option>
+        <option value="31">NM</option>
+        <option value="32">NY</option>
+        <option value="33">NC</option>
+        <option value="34">ND</option>
+        <option value="35">OH</option>
+        <option value="36">OK</option>
+        <option value="37">OR</option>
+        <option value="38">PA</option>
+        <option value="39">RI</option>
+        <option value="40">SC</option>
+        <option value="41">SD</option>
+        <option value="42">TN</option>
+        <option value="43">TX</option>
+        <option value="44">UT</option>
+        <option value="45">VT</option>
+        <option value="46">VA</option>
+        <option value="47">WA</option>
+        <option value="48">WV</option>
+        <option value="49">WI</option>
+        <option value="50">WY</option>
+      </select>
+      <input type="number" id="appZip" name="appZip" placeholder="12345"><br>
+      <label for="appSS">Social Security Number:</label><br>
+      <input type="tel" id="appSS" name="appSS"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" placeholder="123-45-6789">
+      <p class=inputIntro>In what language would the applicant, parent, or guardian prefer to:</p>
+      <label for="appLangSpeak">Speak about the applicant?</label><br>
+      <input type="text" id="appLangSpeak" name="appLangSpeak"><br>
+      <label for="appLangRead">Receive written materials about the applicant?</label><br>
+      <input type="text" id="appLangRead" name="appLangRead"><br>
+      <label for="appInterpret">Are interpreter services needed for hearing?</label><br>
+      <input type="radio" id="interpretYes" name="interpret" value="yes">
+      <label for="interpretYes">Yes</label>
+      <input type="radio" id="interpretNo" name="interpret" value="no">
+      <label for="interpretNo">No</label>
+      <p class="note">NOTE: Translation and interpretation are free of charge to applicants</p>
+      <p class=inputIntro>How may we best contact you? <span class="note">Please check all that apply</span></p>
+      <div class="expanded" id="appPhone1">
+        <input type="checkbox" id="appPrimaryPhone" name="contact" value="primary" onclick="expand1()">
+        <label for="appPrimaryPhone" id="appPrimaryLabel">Primary Phone Number</label>
+        <input class="contracted" type="tel" id="appPhone1Number" name="appPhone1Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br>
+        <p class="contracted" id="appPhone1Message">May we leave a message?</p>
+        <input class="contracted" type="radio" id="appPhone1MessageYes" name="message" value="yes">
+        <label class="contracted" for="appPhone1MessageYes" id="appPhone1MessageYesLabel">Yes</label>
+        <input class="contracted" type="radio" id="appPhone1MessageNo" name="message" value="no">
+        <label class="contracted" for="appPhone1MessageNo" id="appPhone1MessageNoLabel">No</label>
+      </div>
+      <div class="expanded" id="appPhone2">
+        <input type="checkbox" id="appSecondaryPhone" name="contact" value="secondary" onclick="expand2()">
+        <label for="appSecondaryPhone" id="appSecondaryLabel">Secondary Phone Number</label>
+        <input class="contracted" type="tel" id="appPhone2Number" name="appPhone2Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br>
+        <p class="contracted" id="appPhone2Message">May we leave a message?</p>
+        <input class="contracted" type="radio" id="appPhone2MessageYes" name="message" value="yes">
+        <label class="contracted" for="appPhone2MessageYes" id="appPhone2MessageYesLabel">Yes</label>
+        <input class="contracted" type="radio" id="appPhone2MessageNo" name="message" value="no">
+        <label class="contracted" for="appPhone2MessageNo" id="appPhone2MessageNoLabel">No</label>
+      </div>
+      <div class="expanded" id="appEmail">
+        <input type="checkbox" id="appEmailContact" name="contact" value="secondary" onclick="expand3()">
+        <label for="appEmailContact" id="appEmailLabel">Email Address</label>
+        <input class="contracted" type="email" id="appEmailAddress" name="appEmailAddress" placeholder="someone@site.com">
+      </div>
+      <h2>Guardianship</h2>
+      <div class="blueBar"></div>
+      <p class=inputIntro>This section is to be filled out only if there is a court-appointed guardian.</p>
+      <div class="expanded" id="guardian">
+        <p>Does the applicant have a court-appointed guardian?</p>
+        <input type="radio" id="guardianYes" name="guardian" value="yes" onclick="expand4()">
+        <label for="guardianYes">Yes</label>
+        <input type="radio" id="guardianNo" name="guardian" value="no" onclick="expand4()">
+        <label for="guardianNo">No</label><br>
+        <label class="contractedBlock" id="guardNameLabel" for="guardFName">Guardian Name:</label><br>
+        <input class="contractedBlock" type="text" id="guardFName" name="guardFName" placeholder="First Name"><input class="contractedInline"type="text" id="guardLName" name="guardLName" placeholder="Last Name"><br>
+        <label class="contractedBlock" id="guardRelationLabel" for="guardRelation">Relationship to Applicant:</label><br>
+        <input class="contractedBlock" type="text" id="guardRelation" name="guardRelation" placeholder="Relationship"><br>
+        <label class="contractedBlock" id="guardAddressLabel" for="guardAddress1">Guardian Address</label><br>
+        <input class="contractedBlock" type="text" id="guardAddress1" name="guardAddress1" placeholder="123 Somewhere Street"><br>
+        <input class="contractedBlock" type="text" id="guardAddress2" name="guardAddress2" placeholder="Apartment 456 (optional)"><br>
+        <input class="contractedBlock" type="text" id="guardAddress3" name="guardAddress3" placeholder="City">
+        <select class="contractedInline" id="guardState">
+          <option value="1">AL</option>
+          <option value="2">AK</option>
+          <option value="3">AZ</option>
+          <option value="4">AR</option>
+          <option value="5">CA</option>
+          <option value="6">CO</option>
+          <option value="7">CT</option>
+          <option value="8">DE</option>
+          <option value="9">FL</option>
+          <option value="10">GA</option>
+          <option value="11">HA</option>
+          <option value="12">ID</option>
+          <option value="13">IL</option>
+          <option value="14">IN</option>
+          <option value="15">IA</option>
+          <option value="16">KS</option>
+          <option value="17">KY</option>
+          <option value="18">LA</option>
+          <option value="19">ME</option>
+          <option value="20">MD</option>
+          <option selected value="21">MA</option>
+          <option value="22">MI</option>
+          <option value="23">MN</option>
+          <option value="24">MS</option>
+          <option value="25">MO</option>
+          <option value="26">MT</option>
+          <option value="27">NE</option>
+          <option value="28">NE</option>
+          <option value="29">NH</option>
+          <option value="30">NJ</option>
+          <option value="31">NM</option>
+          <option value="32">NY</option>
+          <option value="33">NC</option>
+          <option value="34">ND</option>
+          <option value="35">OH</option>
+          <option value="36">OK</option>
+          <option value="37">OR</option>
+          <option value="38">PA</option>
+          <option value="39">RI</option>
+          <option value="40">SC</option>
+          <option value="41">SD</option>
+          <option value="42">TN</option>
+          <option value="43">TX</option>
+          <option value="44">UT</option>
+          <option value="45">VT</option>
+          <option value="46">VA</option>
+          <option value="47">WA</option>
+          <option value="48">WV</option>
+          <option value="49">WI</option>
+          <option value="50">WY</option>
+        </select>
+        <input class="contractedInline" type="number" id="guardZip" name="guardZip" placeholder="12345"><br>
+        <label class="contractedBlock" id="guardEmailLabel" for="guardEmail">Guardian Email</label><br>
+        <input class="contractedBlock" type="email" id="guardEmail" name="guardEmail" placeholder="somone@site.com"><br>
+        <label class="contractedBlock" id="guardPhoneLabel" for="guardPhone">Guardian Phone</label><br>
+        <input class="contractedBlock" type="tel" id="guardPhone" name="guardPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br>
+      </div>
+      <h2 id="currentSituation">Current Situation</h2>
+      <div class="blueBar"></div>
+      <p class=inputIntro>Is the applicant or you:</p>
+      <div class="expanded" id="home">
+        <p class="expandedBlock">Living at home with family?</p>
+        <input class="expandedBlock" type="radio" id="currentHomeYes" name="home" value="Yes" onclick="expand5()">
+        <label class="expandedInline" for="currentHomeYes">Yes</label>
+        <input class="expandedInline" type="radio" id="currentHomeNo" name="home" value="No" onclick="expand5()">
+        <label class="expandedInline" for="currentHomeNo">No</label><br>
+        <label class="contractedBlock" id="currentHomeTextLabel" for="currentHomeText">Where do you live except a residential school?</label><br>
+        <input class="contractedBlock" type="text" id="currentHomeText" name="currentHomeText">
+      </div>
+      <div class="expanded" id="school">
+        <p class="expandedBlock">Living in a residential school?</p>
+        <input class="expandedBlock" type="radio" id="currentSchoolYes" name="school" value="Yes" onclick="expand6()">
+        <label class="expandedInline" for="currentSchoolYes">Yes</label>
+        <input class="expandedInline" type="radio" id="currentSchoolNo" name="school" value="No" onclick="expand6()">
+        <label class="expandedInline" for="currentSchoolNo">No</label><br>
+        <label class="contractedBlock" id="currentSchoolTextLabel" for="currentSchoolText">What is the name of the school?</label><br>
+        <input class="contractedBlock" type="text" id="currentSchoolText" name="currentSchoolText">
+      </div>
+      <div class="expanded" id="homeless">
+        <p class="expandedBlock">Homeless?</p>
+        <input class="expandedBlock" type="radio" id="currentHomelessYes" name="homeless" value="Yes" onclick="expand7()">
+        <label class="expandedInline" for="currentHomelessYes">Yes</label>
+        <input class="expandedInline" type="radio" id="currentHomelessNo" name="homeless" value="No" onclick="expand7()">
+        <label class="expandedInline" for="currentHomelessNo">No</label><br>
+        <label class="contractedBlock" id="currentHomelessTextLabel" for="currentHomelessText">For how long?</label><br>
+        <input class="contractedBlock" type="text" id="currentHomelessText" name="currentHomelessText">
+      </div>
+      <div class="expanded" id="agency">
+        <p class="expandedBlock">Involved with any other state agency?</p>
+        <input class="expandedBlock" type="radio" id="currentAgencyYes" name="agency" value="Yes" onclick="expand8()">
+        <label class="expandedInline" for="currentAgencyYes">Yes</label>
+        <input class="expandedInline" type="radio" id="currentAgencyNo" name="agency" value="No" onclick="expand8()">
+        <label class="expandedInline" for="currentAgencyNo">No</label><br>
+        <label class="contractedBlock" id="currentAgencyTextLabel" for="currentAgencyText">Which agency?</label><br>
+        <input class="contractedBlock" type="text" id="currentAgencyText" name="currentAgencyText">
+      </div>
+      <div class="expanded" id="hospital">
+        <p class="expandedBlock">Currently in a hospital?</p>
+        <input class="expandedBlock" type="radio" id="currentHospitalYes" name="hospital" value="Yes" onclick="expand9()">
+        <label class="expandedInline" for="currentHospitalYes">Yes</label>
+        <input class="expandedInline" type="radio" id="currentHospitalNo" name="hospital" value="No" onclick="expand9()">
+        <label class="expandedInline" for="currentHospitalNo">No</label><br>
+        <label class="contractedBlock" id="currentHospitalTextLabel" for="currentHospitalText">What is the name of the hospital?</label><br>
+        <input class="contractedBlock" type="text" id="currentHospitalText" name="currentHospitalText">
+      </div>
+      <div class="expanded" id="college">
+        <p class="expandedBlock">Enrolled in school/college?</p>
+        <input class="expandedBlock" type="radio" id="currentCollegeYes" name="college" value="Yes" onclick="expand10()">
+        <label class="expandedInline" for="currentCollegeYes">Yes</label>
+        <input class="expandedInline" type="radio" id="currentCollegeNo" name="college" value="No" onclick="expand10()">
+        <label class="expandedInline" for="currentCollegeNo">No</label><br>
+        <label class="contractedBlock" id="currentCollegeTextLabel" for="currentCollegeText">What is the name of the school/college?</label><br>
+        <input class="contractedBlock" type="text" id="currentCollegeText" name="currentCollegeText">
+      </div>
+      <h2 id="applicationType">Type of Application</h2>
+      <div class="blueBar"></div>
+      <div class="expanded" id="closelyRelated">
+        <p class="expandedBlock">Are you applying to DDS due to a Closely Related Developmental Condition? <a href="https://www.mass.gov/regulations/115-CMR-06-eligibility-individual-support-planning-and-appeals" target="_blank">(115 CMR 6.06 (1))</a></p>
+        <p class="inputIntro">NOTE: Closely related developmental conditions include genetic disorders.</p>
+        <input class="expandedBlock" type="radio" id="closelyRelatedYes" name="closelyRelated" value="Yes" onclick="expand11()">
+        <label class="expandedInline" for="closelyRelatedYes">Yes</label>
+        <input class="expandedInline" type="radio" id="closelyRelatedNo" name="closelyRelated" value="No" onclick="expand11()">
+        <label class="expandedInline" for="closelyRelatedNo">No</label><br>
+        <p class="contractedBlock" id="closelyRelatedExpl">If you are applying as a person with a Closely Related Developmental Condition you must submit a comprehensive diagnostic report from a licensed qualified practitioner such as a Ph.D, Psy.D MD etc. Your diagnosis must be verified in the document(s) or in the results of the Genetic Testing.</p>
+      </div>
+      <div class="expanded" id="intellectualDis">
+        <p class="expandedBlock">Are you applying to DDS due to an Intellectual Disability (ID)?</p>
+        <input class="expandedBlock" type="radio" id="intellectualDisYes" name="intellectualDis" value="Yes" onclick="expand12()">
+        <label class="expandedInline" for="intellectualDisYes">Yes</label>
+        <input class="expandedInline" type="radio" id="intellectualDisNo" name="intellectualDis" value="No" onclick="expand12()">
+        <label class="expandedInline" for="intellectualDisNo">No</label><br>
+        <p class="contractedBlock" id="intellectualDisExpl">If you are applying as a person with an intellectual disability (ID), you must submit, along with this application, a comprehensive diagnostic report from a licensed qualified practitioner such as a Ph.D, Psy.D MD etc. This document(s) must verify your diagnosis. This would include IQ and cognitive testing.</p>
+      </div>
+      <div class="expanded" id="asd">
+        <p class="expandedBlock">Are you applying to DDS due to Autism Spectrum Disorder (ASD)?</p>
+        <input class="expandedBlock" type="radio" id="asdYes" name="asd" value="Yes" onclick="expand13()">
+        <label class="expandedInline" for="asdYes">Yes</label>
+        <input class="expandedInline" type="radio" id="asdNo" name="asd" value="No" onclick="expand13()">
+        <label class="expandedInline" for="asdNo">No</label><br>
+        <p class="contractedBlock" id="asdExpl">If you are applying as a person with an autism spectrum disorder (ASD) you must submit, along with this application, a comprehensive diagnostic report from a licensed qualified practitioner such as a Ph.D, Psy.D MD etc.</p>
+      </div>
+      <div class="expanded" id="praderW">
+        <p class="expandedBlock">Are you applying to DDS due to a Prader-Willi diagnosis?</p>
+        <input class="expandedBlock" type="radio" id="praderWYes" name="praderW" value="Yes" onclick="expand14()">
+        <label class="expandedInline" for="praderWYes">Yes</label>
+        <input class="expandedInline" type="radio" id="praderWNo" name="praderW" value="No" onclick="expand14()">
+        <label class="expandedInline" for="praderWNo">No</label><br>
+        <p class="contractedBlock" id="praderWExpl">If you are applying as a person with Prader-Willi you must submit, along with this application, the genetic testing verifying the Prader–Willi diagnosis.</p>
+      </div>
+      <div class="expanded" id="smithM">
+        <p class="expandedBlock">Are you applying to DDS due to a Smith Magenis Syndrome diagnosis?</p>
+        <input class="expandedBlock" type="radio" id="smithMYes" name="smithM" value="Yes" onclick="expand15()">
+        <label class="expandedInline" for="intellectualDisYes">Yes</label>
+        <input class="expandedInline" type="radio" id="smithMNo" name="smithM" value="No" onclick="expand15()">
+        <label class="expandedInline" for="smithMNo">No</label><br>
+        <p class="contractedBlock" id="smithMExpl">If you are applying as a person with Smith Magenis Syndrome you must submit, along with this application, the genetic testing verifying the Smith Magenis diagnosis.</p>
+      </div>
+      <h2>Parent or Immediate Contact</h2>
+      <div class="blueBar"></div>
+      <label for="parentFName">Full Name:</label><br>
+      <input type="text" id="parentFName" name="parentFName" placeholder="First Name"><input type="text" id="parentMInitial" name="parentMInitial" placeholder="M.I"><input type="text" id="parentLName" name="parentLName" placeholder="Last Name"><br>
+      <label id="parentRelationLabel" for="parentRelation">Relationship to Applicant:</label><br>
+      <input  type="text" id="parentRelation" name="parentRelation" placeholder="Relationship"><br>
+      <label for="parentAddress1">Address</label><br>
+      <input type="text" id="parentAddress1" name="parentAddress1" placeholder="123 Somewhere Street"><br>
+      <input type="text" id="parentAddress2" name="parentAddress2" placeholder="Apartment 456 (optional)"><br>
+      <input type="text" id="parentAddress3" name="parentAddress3" placeholder="City">
+      <select id="parentState">
+        <option value="1">AL</option>
+        <option value="2">AK</option>
+        <option value="3">AZ</option>
+        <option value="4">AR</option>
+        <option value="5">CA</option>
+        <option value="6">CO</option>
+        <option value="7">CT</option>
+        <option value="8">DE</option>
+        <option value="9">FL</option>
+        <option value="10">GA</option>
+        <option value="11">HA</option>
+        <option value="12">ID</option>
+        <option value="13">IL</option>
+        <option value="14">IN</option>
+        <option value="15">IA</option>
+        <option value="16">KS</option>
+        <option value="17">KY</option>
+        <option value="18">LA</option>
+        <option value="19">ME</option>
+        <option value="20">MD</option>
+        <option selected value="21">MA</option>
+        <option value="22">MI</option>
+        <option value="23">MN</option>
+        <option value="24">MS</option>
+        <option value="25">MO</option>
+        <option value="26">MT</option>
+        <option value="27">NE</option>
+        <option value="28">NE</option>
+        <option value="29">NH</option>
+        <option value="30">NJ</option>
+        <option value="31">NM</option>
+        <option value="32">NY</option>
+        <option value="33">NC</option>
+        <option value="34">ND</option>
+        <option value="35">OH</option>
+        <option value="36">OK</option>
+        <option value="37">OR</option>
+        <option value="38">PA</option>
+        <option value="39">RI</option>
+        <option value="40">SC</option>
+        <option value="41">SD</option>
+        <option value="42">TN</option>
+        <option value="43">TX</option>
+        <option value="44">UT</option>
+        <option value="45">VT</option>
+        <option value="46">VA</option>
+        <option value="47">WA</option>
+        <option value="48">WV</option>
+        <option value="49">WI</option>
+        <option value="50">WY</option>
+      </select>
+      <input type="number" id="parentZip" name="parentZip" placeholder="12345"><br>
+      <p class=inputIntro>How may we best contact you? <span class="note">Please check all that apply</span></p>
+      <div class="expanded" id="parentPhone1">
+        <input type="checkbox" id="parentPrimaryPhone" name="contact" value="primary" onclick="expand16()">
+        <label for="parentPrimaryPhone" id="parentPrimaryLabel">Primary Phone Number</label>
+        <input class="contracted" type="tel" id="parentPhone1Number" name="parentPhone1Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br>
+        <p class="contracted" id="parentPhone1Message">May we leave a message?</p>
+        <input class="contracted" type="radio" id="parentPhone1MessageYes" name="message" value="yes">
+        <label class="contracted" for="parentPhone1MessageYes" id="parentPhone1MessageYesLabel">Yes</label>
+        <input class="contracted" type="radio" id="parentPhone1MessageNo" name="message" value="no">
+        <label class="contracted" for="parentPhone1MessageNo" id="parentPhone1MessageNoLabel">No</label>
+      </div>
+      <div class="expanded" id="parentPhone2">
+        <input type="checkbox" id="parentSecondaryPhone" name="contact" value="secondary" onclick="expand17()">
+        <label for="parentSecondaryPhone" id="parentSecondaryLabel">Secondary Phone Number</label>
+        <input class="contracted" type="tel" id="parentPhone2Number" name="parentPhone2Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br>
+        <p class="contracted" id="parentPhone2Message">May we leave a message?</p>
+        <input class="contracted" type="radio" id="parentPhone2MessageYes" name="message" value="yes">
+        <label class="contracted" for="parentPhone2MessageYes" id="parentPhone2MessageYesLabel">Yes</label>
+        <input class="contracted" type="radio" id="parentPhone2MessageNo" name="message" value="no">
+        <label class="contracted" for="parentPhone2MessageNo" id="parentPhone2MessageNoLabel">No</label>
+      </div>
+      <div class="expanded" id="parentEmail">
+        <input type="checkbox" id="parentEmailContact" name="contact" value="secondary" onclick="expand18()">
+        <label for="parentEmailContact" id="parentEmailLabel">Email Address</label>
+        <input class="contracted" type="email" id="parentEmailAddress" name="parentEmailAddress" placeholder="someone@site.com">
+      </div>
+      <h2>Authorized Contact</h2>
+      <div class="blueBar"></div>
+      <p>If you have someone you would like to authorize as a contact for the purpose of eligibility please indicate below. This can be a social worker, teacher, therapist etc. <i>This person cannot be the legal guardian.</i></p>
+      <div class="expanded" id="authorized">
+        <p>Would you like to indicate an authorized contact?</p>
+        <input class="expandedBlock" type="radio" id="authYes" name="authorized" value="yes" onclick="expand19()">
+        <label for="authYes">Yes</label>
+        <input type="radio" id="authNo" name="authorized" value="no" onclick="expand19()">
+        <label for="authNo">No</label><br>
+        <div class="expanded" id="authContact">
+          <label class="expandedBlock" for="authFName">Full Name:</label><br>
+          <input class="expandedBlock" type="text" id="authFName" name="authFName" placeholder="First Name"><input type="text" id="authMInitial" name="authMInitial" placeholder="M.I"><input type="text" id="authLName" name="authLName" placeholder="Last Name"><br>
+          <label class="expandedBlock" id="authRelationLabel" for="authRelation">Relationship to Applicant:</label><br>
+          <input class="expandedBlock" type="text" id="authRelation" name="authRelation" placeholder="Relationship"><br>
+          <label class="expandedBlock" for="authAddress1">Address</label><br>
+          <input class="expandedBlock" type="text" id="authAddress1" name="authAddress1" placeholder="123 Somewhere Street"><br>
+          <input class="expandedBlock" type="text" id="authAddress2" name="authAddress2" placeholder="Apartment 456 (optional)"><br>
+          <input class="expandedBlock" type="text" id="authAddress3" name="authAddress3" placeholder="City">
+          <select id="authState">
+            <option value="1">AL</option>
+            <option value="2">AK</option>
+            <option value="3">AZ</option>
+            <option value="4">AR</option>
+            <option value="5">CA</option>
+            <option value="6">CO</option>
+            <option value="7">CT</option>
+            <option value="8">DE</option>
+            <option value="9">FL</option>
+            <option value="10">GA</option>
+            <option value="11">HA</option>
+            <option value="12">ID</option>
+            <option value="13">IL</option>
+            <option value="14">IN</option>
+            <option value="15">IA</option>
+            <option value="16">KS</option>
+            <option value="17">KY</option>
+            <option value="18">LA</option>
+            <option value="19">ME</option>
+            <option value="20">MD</option>
+            <option selected value="21">MA</option>
+            <option value="22">MI</option>
+            <option value="23">MN</option>
+            <option value="24">MS</option>
+            <option value="25">MO</option>
+            <option value="26">MT</option>
+            <option value="27">NE</option>
+            <option value="28">NE</option>
+            <option value="29">NH</option>
+            <option value="30">NJ</option>
+            <option value="31">NM</option>
+            <option value="32">NY</option>
+            <option value="33">NC</option>
+            <option value="34">ND</option>
+            <option value="35">OH</option>
+            <option value="36">OK</option>
+            <option value="37">OR</option>
+            <option value="38">PA</option>
+            <option value="39">RI</option>
+            <option value="40">SC</option>
+            <option value="41">SD</option>
+            <option value="42">TN</option>
+            <option value="43">TX</option>
+            <option value="44">UT</option>
+            <option value="45">VT</option>
+            <option value="46">VA</option>
+            <option value="47">WA</option>
+            <option value="48">WV</option>
+            <option value="49">WI</option>
+            <option value="50">WY</option>
+          </select>
+          <input type="number" id="authZip" name="authZip" placeholder="12345"><br>
+          <p class="inputIntro expandedBlock">How may we best contact you? <span class="note">Please check all that apply</span></p>
+          <div class="expanded" id="authPhone1">
+            <input class="expandedBlock" type="checkbox" id="authPrimaryPhone" name="contact" value="primary" onclick="expand20()">
+            <label for="authPrimaryPhone" id="authPrimaryLabel">Primary Phone Number</label>
+            <input class="contractedBlock" type="tel" id="authPhone1Number" name="authPhone1Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br>
+            <p class="contractedBlock" id="authPhone1Message">May we leave a message?</p>
+            <input class="contractedBlock" type="radio" id="authPhone1MessageYes" name="message" value="yes">
+            <label class="contractedInline" for="authPhone1MessageYes" id="authPhone1MessageYesLabel">Yes</label>
+            <input class="contractedInline" type="radio" id="authPhone1MessageNo" name="message" value="no">
+            <label class="contractedInline" for="parentPhone1MessageNo" id="authPhone1MessageNoLabel">No</label>
+          </div>
+          <div class="expanded" id="authPhone2">
+            <input class="expandedBlock" type="checkbox" id="authSecondaryPhone" name="contact" value="secondary" onclick="expand21()">
+            <label for="authSecondaryPhone" id="authSecondaryLabel">Secondary Phone Number</label>
+            <input class="contractedBlock" type="tel" id="authPhone2Number" name="authPhone2Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br>
+            <p class="contractedBlock" id="authPhone2Message">May we leave a message?</p>
+            <input class="contractedBlock" type="radio" id="authPhone2MessageYes" name="message" value="yes">
+            <label class="contractedInline" for="authPhone2MessageYes" id="authPhone2MessageYesLabel">Yes</label>
+            <input class="contractedInline" type="radio" id="authPhone2MessageNo" name="message" value="no">
+            <label class="contractedInline" for="authPhone2MessageNo" id="authPhone2MessageNoLabel">No</label>
+          </div>
+          <div class="expanded" id="authEmail">
+            <input class="expandedBlock" type="checkbox" id="authEmailContact" name="contact" value="secondary" onclick="expand22()">
+            <label for="authEmailContact" id="authEmailLabel">Email Address</label>
+            <input class="contractedBlock" type="email" id="authEmailAddress" name="authEmailAddress" placeholder="someone@site.com">
+          </div>
+        </div>
+      </div>
+      <button type="button">Next <span class="blueArrow">></span></button>
+      <div class="footer"></div>
+
+      <script>
+
+        function expand1() {
+          var checkBox1 = document.getElementById("appPrimaryPhone");
+
+          if (checkBox1.checked == true){
+            document.getElementById("appPhone1").style.backgroundColor = "#f2f2f2";
+            document.getElementById('appPhone1Number').style.display = "block";
+            document.getElementById('appPhone1Message').style.display = "block";
+            document.getElementById('appPhone1MessageYes').style.display = "inline";
+            document.getElementById('appPhone1MessageYesLabel').style.display = "inline";
+            document.getElementById('appPhone1MessageNo').style.display = "inline";
+            document.getElementById('appPhone1MessageNoLabel').style.display = "inline";
+            document.getElementById('appPhone1').style.borderBottom = "#f2f2f2";
+            document.getElementById('appPhone1').style.marginBottom = "10px";
+            document.getElementById('appPhone1').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById("appPhone1").style.backgroundColor = "#ffffff";
+            document.getElementById('appPhone1Number').style.display = "none";
+            document.getElementById('appPhone1Message').style.display = "none";
+            document.getElementById('appPhone1MessageYes').style.display = "none";
+            document.getElementById('appPhone1MessageYesLabel').style.display = "none";
+            document.getElementById('appPhone1MessageNo').style.display = "none";
+            document.getElementById('appPhone1MessageNoLabel').style.display = "none";
+            document.getElementById('appPhone1').style.borderBottom = "#ffffff";
+            document.getElementById('appPhone1').style.marginBottom = "5px";
+            document.getElementById('appPhone1').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+
+        function expand2() {
+          var checkBox2 = document.getElementById("appSecondaryPhone");
+
+          if (checkBox2.checked == true){
+            document.getElementById("appPhone2").style.backgroundColor = "#f2f2f2";
+            document.getElementById('appPhone2Number').style.display = "block";
+            document.getElementById('appPhone2Message').style.display = "block";
+            document.getElementById('appPhone2MessageYes').style.display = "inline";
+            document.getElementById('appPhone2MessageYesLabel').style.display = "inline";
+            document.getElementById('appPhone2MessageNo').style.display = "inline";
+            document.getElementById('appPhone2MessageNoLabel').style.display = "inline";
+            document.getElementById('appPhone2').style.borderBottom = "#f2f2f2";
+            document.getElementById('appPhone2').style.marginBottom = "10px";
+            document.getElementById('appPhone2').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById("appPhone2").style.backgroundColor = "#ffffff";
+            document.getElementById('appPhone2Number').style.display = "none";
+            document.getElementById('appPhone2Message').style.display = "none";
+            document.getElementById('appPhone2MessageYes').style.display = "none";
+            document.getElementById('appPhone2MessageYesLabel').style.display = "none";
+            document.getElementById('appPhone2MessageNo').style.display = "none";
+            document.getElementById('appPhone2MessageNoLabel').style.display = "none";
+            document.getElementById('appPhone2').style.borderBottom = "#ffffff";
+            document.getElementById('appPhone2').style.marginBottom = "5px";
+            document.getElementById('appPhone2').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand3() {
+          var checkBox3 = document.getElementById("appEmailContact");
+
+          if (checkBox3.checked == true){
+            document.getElementById('appEmail').style.backgroundColor = "#f2f2f2";
+            document.getElementById('appEmailAddress').style.display = "block";
+            document.getElementById('appEmail').style.height = "72px";
+            document.getElementById('appEmail').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById('appEmail').style.backgroundColor = "#ffffff";
+            document.getElementById('appEmailAddress').style.display = "none";
+            document.getElementById('appEmail').style.height = "25px";
+            document.getElementById('appEmail').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand4() {
+          var radio1 = document.getElementById("guardianYes");
+          var radio2 = document.getElementById("guardianNo");
+
+          if (radio1.checked == true){
+            document.getElementById('guardian').style.backgroundColor = "#f2f2f2";
+            document.getElementById('guardNameLabel').style.display = "inline";
+            document.getElementById('guardFName').style.display = "inline";
+            document.getElementById('guardLName').style.display = "inline";
+            document.getElementById('guardRelationLabel').style.display = "inline";
+            document.getElementById('guardRelation').style.display = "inline";
+            document.getElementById('guardAddressLabel').style.display = "inline";
+            document.getElementById('guardAddress1').style.display = "inline";
+            document.getElementById('guardAddress2').style.display = "inline";
+            document.getElementById('guardAddress3').style.display = "inline";
+            document.getElementById('guardState').style.display = "inline";
+            document.getElementById('guardZip').style.display = "inline";
+            document.getElementById('guardEmailLabel').style.display = "inline";
+            document.getElementById('guardEmail').style.display = "inline";
+            document.getElementById('guardPhoneLabel').style.display = "inline";
+            document.getElementById('guardPhone').style.display = "inline";
+            document.getElementById('guardian').style.height = "400px";
+            document.getElementById('guardian').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('guardian').style.backgroundColor = "#ffffff";
+            document.getElementById('guardNameLabel').style.display = "none";
+            document.getElementById('guardFName').style.display = "none";
+            document.getElementById('guardLName').style.display = "none";
+            document.getElementById('guardRelationLabel').style.display = "none";
+            document.getElementById('guardRelation').style.display = "none";
+            document.getElementById('guardAddressLabel').style.display = "none";
+            document.getElementById('guardAddress1').style.display = "none";
+            document.getElementById('guardAddress2').style.display = "none";
+            document.getElementById('guardAddress3').style.display = "none";
+            document.getElementById('guardState').style.display = "none";
+            document.getElementById('guardZip').style.display = "none";
+            document.getElementById('guardEmailLabel').style.display = "none";
+            document.getElementById('guardEmail').style.display = "none";
+            document.getElementById('guardPhoneLabel').style.display = "none";
+            document.getElementById('guardPhone').style.display = "none";
+            document.getElementById('guardian').style.height = "25px";
+            document.getElementById('guardian').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand5() {
+          var radio1 = document.getElementById("currentHomeYes");
+          var radio2 = document.getElementById("currentHomeNo");
+
+          if (radio2.checked == true){
+            document.getElementById('home').style.backgroundColor = "#f2f2f2";
+            document.getElementById('currentHomeTextLabel').style.display = "inline";
+            document.getElementById('currentHomeText').style.display = "inline";
+            document.getElementById('home').style.height = "125px";
+            document.getElementById('home').style.marginBottom = "1px";
+            document.getElementById('home').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio1.checked == true) {
+            document.getElementById('home').style.backgroundColor = "#ffffff";
+            document.getElementById('currentHomeTextLabel').style.display = "none";
+            document.getElementById('currentHomeText').style.display = "none";
+            document.getElementById('home').style.height = "60px";
+            document.getElementById('home').style.marginBottom = "0px";
+            document.getElementById('home').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand6() {
+          var radio1 = document.getElementById("currentSchoolYes");
+          var radio2 = document.getElementById("currentSchoolNo");
+
+          if (radio1.checked == true){
+            document.getElementById('school').style.backgroundColor = "#f2f2f2";
+            document.getElementById('currentSchoolTextLabel').style.display = "inline";
+            document.getElementById('currentSchoolText').style.display = "inline";
+            document.getElementById('school').style.height = "125px";
+            document.getElementById('school').style.marginBottom = "1px";
+            document.getElementById('school').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('school').style.backgroundColor = "#ffffff";
+            document.getElementById('currentSchoolTextLabel').style.display = "none";
+            document.getElementById('currentSchoolText').style.display = "none";
+            document.getElementById('school').style.height = "60px";
+            document.getElementById('school').style.marginBottom = "0px";
+            document.getElementById('school').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand7() {
+          var radio1 = document.getElementById("currentHomelessYes");
+          var radio2 = document.getElementById("currentHomelessNo");
+
+          if (radio1.checked == true){
+            document.getElementById('homeless').style.backgroundColor = "#f2f2f2";
+            document.getElementById('currentHomelessTextLabel').style.display = "inline";
+            document.getElementById('currentHomelessText').style.display = "inline";
+            document.getElementById('homeless').style.height = "125px";
+            document.getElementById('homeless').style.marginBottom = "1px";
+            document.getElementById('homeless').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('homeless').style.backgroundColor = "#ffffff";
+            document.getElementById('currentHomelessTextLabel').style.display = "none";
+            document.getElementById('currentHomelessText').style.display = "none";
+            document.getElementById('homeless').style.height = "60px";
+            document.getElementById('homeless').style.marginBottom = "0px";
+            document.getElementById('homeless').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand8() {
+          var radio1 = document.getElementById("currentAgencyYes");
+          var radio2 = document.getElementById("currentAgencyNo");
+
+          if (radio1.checked == true){
+            document.getElementById('agency').style.backgroundColor = "#f2f2f2";
+            document.getElementById('currentAgencyTextLabel').style.display = "inline";
+            document.getElementById('currentAgencyText').style.display = "inline";
+            document.getElementById('agency').style.height = "125px";
+            document.getElementById('agency').style.marginBottom = "1px";
+            document.getElementById('agency').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('agency').style.backgroundColor = "#ffffff";
+            document.getElementById('currentAgencyTextLabel').style.display = "none";
+            document.getElementById('currentAgencyText').style.display = "none";
+            document.getElementById('agency').style.height = "60px";
+            document.getElementById('agency').style.marginBottom = "0px";
+            document.getElementById('agency').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand9() {
+          var radio1 = document.getElementById("currentHospitalYes");
+          var radio2 = document.getElementById("currentHospitalNo");
+
+          if (radio1.checked == true){
+            document.getElementById('hospital').style.backgroundColor = "#f2f2f2";
+            document.getElementById('currentHospitalTextLabel').style.display = "inline";
+            document.getElementById('currentHospitalText').style.display = "inline";
+            document.getElementById('hospital').style.height = "125px";
+            document.getElementById('hospital').style.marginBottom = "1px";
+            document.getElementById('hospital').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('hospital').style.backgroundColor = "#ffffff";
+            document.getElementById('currentHospitalTextLabel').style.display = "none";
+            document.getElementById('currentHospitalText').style.display = "none";
+            document.getElementById('hospital').style.height = "60px";
+            document.getElementById('hospital').style.marginBottom = "0px";
+            document.getElementById('hospital').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand10() {
+          var radio1 = document.getElementById("currentCollegeYes");
+          var radio2 = document.getElementById("currentCollegeNo");
+
+          if (radio1.checked == true){
+            document.getElementById('college').style.backgroundColor = "#f2f2f2";
+            document.getElementById('currentCollegeTextLabel').style.display = "inline";
+            document.getElementById('currentCollegeText').style.display = "inline";
+            document.getElementById('college').style.height = "125px";
+            document.getElementById('college').style.marginBottom = "1px";
+            document.getElementById('college').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('college').style.backgroundColor = "#ffffff";
+            document.getElementById('currentCollegeTextLabel').style.display = "none";
+            document.getElementById('currentCollegeText').style.display = "none";
+            document.getElementById('college').style.height = "60px";
+            document.getElementById('college').style.marginBottom = "0px";
+            document.getElementById('college').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand11() {
+          var radio1 = document.getElementById("closelyRelatedYes");
+          var radio2 = document.getElementById("closelyRelatedNo");
+
+          if (radio1.checked == true){
+            document.getElementById('closelyRelated').style.backgroundColor = "#f2f2f2";
+            document.getElementById('closelyRelatedExpl').style.display = "block";
+            document.getElementById('closelyRelated').style.height = "100%";
+            document.getElementById('closelyRelated').style.marginBottom = "1px";
+            document.getElementById('closelyRelated').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('closelyRelated').style.backgroundColor = "#ffffff";
+            document.getElementById('closelyRelatedExpl').style.display = "none";
+            document.getElementById('closelyRelated').style.height = "80px";
+            document.getElementById('closelyRelated').style.marginBottom = "0px";
+            document.getElementById('closelyRelated').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand12() {
+          var radio1 = document.getElementById("intellectualDisYes");
+          var radio2 = document.getElementById("intellectualDisNo");
+
+          if (radio1.checked == true){
+            document.getElementById('intellectualDis').style.backgroundColor = "#f2f2f2";
+            document.getElementById('intellectualDisExpl').style.display = "block";
+            document.getElementById('intellectualDis').style.height = "100%";
+            document.getElementById('intellectualDis').style.marginBottom = "1px";
+            document.getElementById('intellectualDis').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('intellectualDis').style.backgroundColor = "#ffffff";
+            document.getElementById('intellectualDisExpl').style.display = "none";
+            document.getElementById('intellectualDis').style.height = "50px";
+            document.getElementById('intellectualDis').style.marginBottom = "0px";
+            document.getElementById('intellectualDis').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand13() {
+          var radio1 = document.getElementById("asdYes");
+          var radio2 = document.getElementById("asdNo");
+
+          if (radio1.checked == true){
+            document.getElementById('asd').style.backgroundColor = "#f2f2f2";
+            document.getElementById('asdExpl').style.display = "block";
+            document.getElementById('asd').style.height = "100%";
+            document.getElementById('asd').style.marginBottom = "1px";
+            document.getElementById('asd').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('asd').style.backgroundColor = "#ffffff";
+            document.getElementById('asdExpl').style.display = "none";
+            document.getElementById('asd').style.height = "60px";
+            document.getElementById('asd').style.marginBottom = "0px";
+            document.getElementById('asd').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand14() {
+          var radio1 = document.getElementById("praderWYes");
+          var radio2 = document.getElementById("praderWNo");
+
+          if (radio1.checked == true){
+            document.getElementById('praderW').style.backgroundColor = "#f2f2f2";
+            document.getElementById('praderWExpl').style.display = "block";
+            document.getElementById('praderW').style.height = "100%";
+            document.getElementById('praderW').style.marginBottom = "1px";
+            document.getElementById('praderW').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('praderW').style.backgroundColor = "#ffffff";
+            document.getElementById('praderWExpl').style.display = "none";
+            document.getElementById('praderW').style.height = "60px";
+            document.getElementById('praderW').style.marginBottom = "0px";
+            document.getElementById('praderW').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand15() {
+          var radio1 = document.getElementById("smithMYes");
+          var radio2 = document.getElementById("smithMNo");
+
+          if (radio1.checked == true){
+            document.getElementById('smithM').style.backgroundColor = "#f2f2f2";
+            document.getElementById('smithMExpl').style.display = "block";
+            document.getElementById('smithM').style.height = "100%";
+            document.getElementById('smithM').style.marginBottom = "1px";
+            document.getElementById('smithM').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('smithM').style.backgroundColor = "#ffffff";
+            document.getElementById('smithMExpl').style.display = "none";
+            document.getElementById('smithM').style.height = "60px";
+            document.getElementById('smithM').style.marginBottom = "0px";
+            document.getElementById('smithM').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand16() {
+          var checkBox1 = document.getElementById("parentPrimaryPhone");
+
+          if (checkBox1.checked == true){
+            document.getElementById("parentPhone1").style.backgroundColor = "#f2f2f2";
+            document.getElementById('parentPhone1Number').style.display = "block";
+            document.getElementById('parentPhone1Message').style.display = "block";
+            document.getElementById('parentPhone1MessageYes').style.display = "inline";
+            document.getElementById('parentPhone1MessageYesLabel').style.display = "inline";
+            document.getElementById('parentPhone1MessageNo').style.display = "inline";
+            document.getElementById('parentPhone1MessageNoLabel').style.display = "inline";
+            document.getElementById('parentPhone1').style.borderBottom = "#f2f2f2";
+            document.getElementById('parentPhone1').style.marginBottom = "10px";
+            document.getElementById('parentPhone1').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById("parentPhone1").style.backgroundColor = "#ffffff";
+            document.getElementById('parentPhone1Number').style.display = "none";
+            document.getElementById('parentPhone1Message').style.display = "none";
+            document.getElementById('parentPhone1MessageYes').style.display = "none";
+            document.getElementById('parentPhone1MessageYesLabel').style.display = "none";
+            document.getElementById('parentPhone1MessageNo').style.display = "none";
+            document.getElementById('parentPhone1MessageNoLabel').style.display = "none";
+            document.getElementById('parentPhone1').style.borderBottom = "#ffffff";
+            document.getElementById('parentPhone1').style.marginBottom = "5px";
+            document.getElementById('parentPhone1').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+
+        function expand17() {
+          var checkBox2 = document.getElementById("parentSecondaryPhone");
+
+          if (checkBox2.checked == true){
+            document.getElementById("parentPhone2").style.backgroundColor = "#f2f2f2";
+            document.getElementById('parentPhone2Number').style.display = "block";
+            document.getElementById('parentPhone2Message').style.display = "block";
+            document.getElementById('parentPhone2MessageYes').style.display = "inline";
+            document.getElementById('parentPhone2MessageYesLabel').style.display = "inline";
+            document.getElementById('parentPhone2MessageNo').style.display = "inline";
+            document.getElementById('parentPhone2MessageNoLabel').style.display = "inline";
+            document.getElementById('parentPhone2').style.borderBottom = "#f2f2f2";
+            document.getElementById('parentPhone2').style.marginBottom = "10px";
+            document.getElementById('parentPhone2').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById("parentPhone2").style.backgroundColor = "#ffffff";
+            document.getElementById('parentPhone2Number').style.display = "none";
+            document.getElementById('parentPhone2Message').style.display = "none";
+            document.getElementById('parentPhone2MessageYes').style.display = "none";
+            document.getElementById('parentPhone2MessageYesLabel').style.display = "none";
+            document.getElementById('parentPhone2MessageNo').style.display = "none";
+            document.getElementById('parentPhone2MessageNoLabel').style.display = "none";
+            document.getElementById('parentPhone2').style.borderBottom = "#ffffff";
+            document.getElementById('parentPhone2').style.marginBottom = "5px";
+            document.getElementById('parentPhone2').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand18() {
+          var checkBox3 = document.getElementById("parentEmailContact");
+
+          if (checkBox3.checked == true){
+            document.getElementById('parentEmail').style.backgroundColor = "#f2f2f2";
+            document.getElementById('parentEmailAddress').style.display = "block";
+            document.getElementById('parentEmail').style.height = "72px";
+            document.getElementById('parentEmail').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById('parentEmail').style.backgroundColor = "#ffffff";
+            document.getElementById('parentEmailAddress').style.display = "none";
+            document.getElementById('parentEmail').style.height = "25px";
+            document.getElementById('parentEmail').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand19() {
+          var radio1 = document.getElementById("authYes");
+          var radio2 = document.getElementById("authNo");
+
+          if (radio1.checked == true){
+            document.getElementById('authorized').style.backgroundColor = "#f2f2f2";
+            document.getElementById('authContact').style.display = "block";
+            document.getElementById('authorized').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else if (radio2.checked == true) {
+            document.getElementById('authorized').style.backgroundColor = "#ffffff";
+            document.getElementById('authContact').style.display = "none";
+            document.getElementById('authorized').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand20() {
+          var checkBox1 = document.getElementById("authPrimaryPhone");
+
+          if (checkBox1.checked == true){
+            document.getElementById('authPhone1').style.backgroundColor = "#bfbfbf";
+            document.getElementById('authPhone1Number').style.display = "block";
+            document.getElementById('authPhone1Message').style.display = "block";
+            document.getElementById('authPhone1MessageYes').style.display = "inline";
+            document.getElementById('authPhone1MessageYesLabel').style.display = "inline";
+            document.getElementById('authPhone1MessageNo').style.display = "inline";
+            document.getElementById('authPhone1MessageNoLabel').style.display = "inline";
+            document.getElementById('authPhone1').style.borderBottom = "#bfbfbf";
+            document.getElementById('authPhone1').style.marginBottom = "10px";
+            document.getElementById('authPhone1').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById('authPhone1').style.backgroundColor = "#f2f2f2";
+            document.getElementById('authPhone1Number').style.display = "none";
+            document.getElementById('authPhone1Message').style.display = "none";
+            document.getElementById('authPhone1MessageYes').style.display = "none";
+            document.getElementById('authPhone1MessageYesLabel').style.display = "none";
+            document.getElementById('authPhone1MessageNo').style.display = "none";
+            document.getElementById('authPhone1MessageNoLabel').style.display = "none";
+            document.getElementById('authPhone1').style.borderBottom = "#f2f2f2";
+            document.getElementById('authPhone1').style.marginBottom = "5px";
+            document.getElementById('authPhone1').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+
+        function expand21() {
+          var checkBox2 = document.getElementById("authSecondaryPhone");
+
+          if (checkBox2.checked == true){
+            document.getElementById('authPhone2').style.backgroundColor = "#bfbfbf";
+            document.getElementById('authPhone2Number').style.display = "block";
+            document.getElementById('authPhone2Message').style.display = "block";
+            document.getElementById('authPhone2MessageYes').style.display = "inline";
+            document.getElementById('authPhone2MessageYesLabel').style.display = "inline";
+            document.getElementById('authPhone2MessageNo').style.display = "inline";
+            document.getElementById('authPhone2MessageNoLabel').style.display = "inline";
+            document.getElementById('authPhone2').style.borderBottom = "#bfbfbf";
+            document.getElementById('authPhone2').style.marginBottom = "10px";
+            document.getElementById('authPhone2').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById('authPhone2').style.backgroundColor = "#f2f2f2";
+            document.getElementById('authPhone2Number').style.display = "none";
+            document.getElementById('authPhone2Message').style.display = "none";
+            document.getElementById('authPhone2MessageYes').style.display = "none";
+            document.getElementById('authPhone2MessageYesLabel').style.display = "none";
+            document.getElementById('authPhone2MessageNo').style.display = "none";
+            document.getElementById('authPhone2MessageNoLabel').style.display = "none";
+            document.getElementById('authPhone2').style.borderBottom = "#f2f2f2";
+            document.getElementById('authPhone2').style.marginBottom = "5px";
+            document.getElementById('authPhone2').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+        function expand22() {
+          var checkBox3 = document.getElementById("authEmailContact");
+
+          if (checkBox3.checked == true){
+            document.getElementById('authEmail').style.backgroundColor = "#bfbfbf";
+            document.getElementById('authEmailAddress').style.display = "block";
+            document.getElementById('authEmail').style.height = "72px";
+            document.getElementById('authEmail').style.boxShadow = "0 0.25rem 0.5rem rgba(0,0,0,0.25)";
+          } else {
+            document.getElementById('authEmail').style.backgroundColor = "#f2f2f2";
+            document.getElementById('authEmailAddress').style.display = "none";
+            document.getElementById('authEmail').style.height = "25px";
+            document.getElementById('authEmail').style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+          };
+        }
+
+      </script>
+    </form>
+  </body>
+</html>

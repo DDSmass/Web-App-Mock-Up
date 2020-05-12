@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:600|Montserrat:400,400i,500,500i,600,600i,700,700i,900,900i&display=swap');
+
+body{
+  font-family: Montserrat,sans-serif;
+}
+
+.footer{
+  height: 30px;
+  background-color: #12558f;
+  margin-left: -8.5vw;
+  margin-right: -8.5vw;
+  margin-bottom: -5vh;
+  margin-top: 5vh;
+}
+
+p{
+  font-size: 1.1rem;
+  margin-bottom: 0vh;
+}
+
+.note{
+  font-size: .85rem;
+}
+
+.inputIntro{
+  font-style: italic;
+}
+
+.expanded{
+  margin-left: -8.5vw;
+  margin-right: -8.5vw;
+  margin-bottom: -2vh;
+}
+
+.contracted{
+  display: none;
+  margin-left: 8.75vw;
+}
+
+.contractedBlock{
+  display: none;
+  margin-left: 8.75vw;
+}
+
+.contractedInline{
+  display: none;
+}
+
+.header{
+  height: 124px;
+  background-color: #f2f2f2;
+  border-top: solid 43px #12558f;
+  margin:-8px;
+}
+
+.headerColumn{
+  float: left;
+}
+
+.Left{
+  width: 9vw;
+}
+
+.Mid{
+  width:70vw;
+}
+
+.Right{
+  width:20vw;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#seal{
+  width: 91px;
+  height: auto;
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+.header1{
+  font-family: Montserrat;
+  font-size: 2.06em;
+  font-weight: 600;
+  color: #368557;
+  margin-top: 16px;
+  margin-bottom: 0vh;
+  margin-left:.5rem;
+  margin-right: 31.5vw;
+}
+
+.header2{
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0px;
+  margin-left:.5rem;
+}
+
+.accountHeader{
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: right;
+  margin-bottom: 0vh;
+}
+
+.accountText{
+  font-family: Montserrat;
+  font-size: .75rem;
+  font-weight: 600;
+  color: #368557;
+  text-align: right;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.accountText:hover{
+  text-decoration: underline 2px #83c099 solid;
+  transition: border 0.4s ease;
+  cursor: pointer;
+}
+
+.greenArrow{
+  font-size: 1rem;
+  font-family: Poppins;
+  font-weight: 600;
+  color:#368557;
+}
+
+.blueArrow{
+  font-size: 1rem;
+  font-family: Poppins;
+  font-weight: 600;
+  color:#12558f;
+}
+
+#application{
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+h1{
+  font-size: 2.06rem;
+}
+
+h2{
+  font-weight: 500;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+}
+
+.blueBar{
+  color: #ffffff;
+  width: 25vw;
+  height: .6vh;
+  background-image: linear-gradient(-60deg,transparent,transparent 35px,#12558f 35px);
+  margin-bottom: 2vh;
+}
+
+select{
+  border-color: rgba(20,85,143,0.2);
+  font-family: Montserrat,sans-serif;
+  font-size: .95rem;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+
+select:focus{
+  border-color: rgba(20,85,143,1);
+}
+
+input{
+  font-family: Montserrat, sans-serif;
+  font-size: .95rem;
+  margin-right: 3px;
+  border-color: rgba(20,85,143,0.2);
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+
+input:focus{
+  border-color: rgba(20,85,143,1);
+}
+
+label{
+  font-size: 1.1rem;
+}
+
+#appMInitial,#parentMInitial,#authMInitial{
+  width: 2vw;
+}
+
+#appAddress1,#appAddress2,#guardAddress1,#guardAddress2,#parentAddress1,#parentAddress2,#authAddress1,#authAddress2{
+  margin-bottom: 0vh;
+  width: 25vw;
+}
+
+#appLangSpeak{
+  margin-bottom: 0vh;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input[type=number]:-webkit-inner-spin-button,
+input[type=number]:-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.expanded p{
+  margin-left: 9vw;
+  margin-right: 9vw;
+}
+
+#appPrimaryPhone,#appSecondaryPhone,#appEmailContact,#parentPrimaryPhone,#parentSecondaryPhone,#parentEmailContact,#authPrimaryPhone,#authSecondaryPhone,#authEmailContact{
+  margin-left: 8.75vw;
+}
+
+#appPhone1MessageYesLabel,#appPhone1MessageNoLabel,#appPhone2MessageYesLabel,#appPhone2MessageNoLabel,#parentPhone1MessageYesLabel,#parentPhone1MessageNoLabel,#parentPhone2MessageYesLabel,#parentPhone2MessageNoLabel,#authPhone1MessageYesLabel,#authPhone1MessageNoLabel,#authPhone2MessageYesLabel,#authPhone2MessageNoLabel{
+  margin-left: 0vw;
+  margin-right: .5vw;
+}
+
+#appPhone1MessageNo,#appPhone2MessageNo,#parentPhone1MessageNo,#parentPhone2MessageNo,#authPhone1MessageNo,#authPhone2MessageNo{
+  margin-left: 0vw;
+}
+
+#appPhone1,#appPhone2,#parentPhone1,#parentPhone2{
+  margin-bottom: 2px;
+  border-bottom: 2px solid #ffffff;
+}
+
+#authPhone1,#authPhone2{
+  margin-bottom: 2px;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+#appEmail,#guardian,#parentEmail,#authEmail{
+  height: 25px;
+}
+
+#currentSituation{
+  margin-top: 7vh;
+}
+
+#appEmailAddress,#guardEmail,#parentEmailAddress,#authEmailAddress{
+  width: 25vw;
+}
+
+#guardianYes{
+  margin-left: 8.75vw;
+}
+
+#guardian input{
+  margin-top: 1vh;
+  margin-bottom: 0vh;
+}
+
+#guardian label{
+  margin-bottom: 0vh;
+}
+
+#authorized{
+  margin-left: -8.75vw;
+}
+
+#authContact{
+  margin-left: 0vw;
+  display: none;
+  width: 96vw;
+}
+
+#authPhone1,#authPhone2,#authEmail{
+  margin-left: 0vw;
+  width: 99vw;
+}
+
+.expandedBlock{
+  margin-left: 8.75vw;
+}
+
+button{
+  margin-top: 4vh;
+  background-color: rgba(20,85,143,0.2);
+  border: 3px solid #8aaac7;
+  cursor: pointer;
+  color: #12558f;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 10px 32px;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.25);
+}
+
+button:hover{
+  text-decoration: underline 2px #8aaac7 solid;
+  transition: border 0.4s ease;
+}
