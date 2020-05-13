@@ -57,16 +57,16 @@ p{
   float: left;
 }
 
-.Left{
-  width: 9vw;
+.left{
+  width: 9%;
 }
 
-.Mid{
-  width:70vw;
+.mid{
+  width:71%;
 }
 
-.Right{
-  width:20vw;
+.right{
+  width:20%;
 }
 
 .row:after {
@@ -90,7 +90,6 @@ p{
   margin-top: 16px;
   margin-bottom: 0vh;
   margin-left:.5rem;
-  margin-right: 31.5vw;
 }
 
 .header2{
@@ -301,4 +300,60 @@ button{
 button:hover{
   text-decoration: underline 2px #8aaac7 solid;
   transition: border 0.4s ease;
+}
+
+@media only screen and (max-width: 1150px){
+  .header{
+    height: 100px;
+  }
+
+  #seal{
+    width: 55px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 35px;
+  }
+
+  .header1{
+    font-family: Montserrat;
+    font-size: 1.75em;
+    font-weight: 600;
+    color: #368557;
+    margin-top: 16px;
+    margin-bottom: 0vh;
+    margin-left:.5rem;
+  }
+
+  .header2{
+    font-family: Montserrat;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0px;
+    margin-left:.5rem;
+  }
+
+  .accountHeader{
+    font-family: Montserrat;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: right;
+    margin-bottom: 0vh;
+  }
+
+  .accountText{
+    font-family: Montserrat;
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: #368557;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .greenArrow{
+    font-size: .75rem;
+    font-family: Poppins;
+    font-weight: 600;
+    color:#368557;
+  }
 }

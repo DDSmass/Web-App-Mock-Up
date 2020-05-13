@@ -6,16 +6,16 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
-    <div class=header>
-      <div class=headerColumn Left>
+    <div class="header">
+      <div class="headerColumn left">
         <img id="seal" src="photos/seal.svg" alt="Massachusetts Seal">
       </div>
-      <div class=headerColumn Mid>
+      <div class="headerColumn mid">
         <p class="header1">The Commonwealth of Massachusetts</p>
         <p class="header2">Executive Office of Heath and Human Services</p>
         <p class="header2"><i>Department of Developmental Services</i></p>
       </div>
-      <div class=headerColumn Right>
+      <div class="headerColumn right">
         <p class="accountHeader">Welcome, User</p>
         <p class="accountText">My account <span class="greenArrow">></span></p>
         <p class="accountText">Log Out <span class="greenArrow">></span></p>
@@ -96,7 +96,7 @@
       <input type="number" id="appZip" name="appZip" placeholder="12345"><br>
       <label for="appSS">Social Security Number:</label><br>
       <input type="tel" id="appSS" name="appSS"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" placeholder="123-45-6789">
-      <p class=inputIntro>In what language would the applicant, parent, or guardian prefer to:</p>
+      <p class="inputIntro">In what language would the applicant, parent, or guardian prefer to:</p>
       <label for="appLangSpeak">Speak about the applicant?</label><br>
       <input type="text" id="appLangSpeak" name="appLangSpeak"><br>
       <label for="appLangRead">Receive written materials about the applicant?</label><br>
@@ -107,7 +107,7 @@
       <input type="radio" id="interpretNo" name="interpret" value="no">
       <label for="interpretNo">No</label>
       <p class="note">NOTE: Translation and interpretation are free of charge to applicants</p>
-      <p class=inputIntro>How may we best contact you? <span class="note">Please check all that apply</span></p>
+      <p class="inputIntro">How may we best contact you? <span class="note">Please check all that apply</span></p>
       <div class="expanded" id="appPhone1">
         <input type="checkbox" id="appPrimaryPhone" name="contact" value="primary" onclick="expand1()">
         <label for="appPrimaryPhone" id="appPrimaryLabel">Primary Phone Number</label>
@@ -135,7 +135,7 @@
       </div>
       <h2>Guardianship</h2>
       <div class="blueBar"></div>
-      <p class=inputIntro>This section is to be filled out only if there is a court-appointed guardian.</p>
+      <p class="inputIntro">This section is to be filled out only if there is a court-appointed guardian.</p>
       <div class="expanded" id="guardian">
         <p>Does the applicant have a court-appointed guardian?</p>
         <input type="radio" id="guardianYes" name="guardian" value="yes" onclick="expand4()">
@@ -210,7 +210,7 @@
       </div>
       <h2 id="currentSituation">Current Situation</h2>
       <div class="blueBar"></div>
-      <p class=inputIntro>Is the applicant or you:</p>
+      <p class="inputIntro">Is the applicant or you:</p>
       <div class="expanded" id="home">
         <p class="expandedBlock">Living at home with family?</p>
         <input class="expandedBlock" type="radio" id="currentHomeYes" name="home" value="Yes" onclick="expand5()">
@@ -371,7 +371,7 @@
         <option value="50">WY</option>
       </select>
       <input type="number" id="parentZip" name="parentZip" placeholder="12345"><br>
-      <p class=inputIntro>How may we best contact you? <span class="note">Please check all that apply</span></p>
+      <p class="inputIntro">How may we best contact you? <span class="note">Please check all that apply</span></p>
       <div class="expanded" id="parentPhone1">
         <input type="checkbox" id="parentPrimaryPhone" name="contact" value="primary" onclick="expand16()">
         <label for="parentPrimaryPhone" id="parentPrimaryLabel">Primary Phone Number</label>
